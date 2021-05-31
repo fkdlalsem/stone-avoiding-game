@@ -52,16 +52,17 @@ void map()																				   //게임 스테이지맵 구현
 		{
 			if((x==5)||(x==19)||(y==5)||(y==27))
 			{
+			
 			gotoxy((x*2),y);
 			printf("■");
-			}
 			Sleep(1);
+			}
 
 		}
 	}
 	Sleep(100);
-	gotoxy(22,3);
-	printf("STAGE 1");
+	gotoxy(18,3);
+	printf("블록피하기게임");
 	gotoxy(45,6);
 	printf("점수 : 0"); 
 	gotoxy(25,28);
@@ -76,7 +77,7 @@ void count3(int count_input_delete,int x,int y)											//카운트 3
 		printf("%s",block[count_input_delete]);
 		Sleep(5);
 		}
-	gotoxy(25,28);
+	gotoxy(24,28);
 }
 
 void count2(int count_input_delete,int x,int y)											//카운트 2 
@@ -87,7 +88,7 @@ void count2(int count_input_delete,int x,int y)											//카운트 2
 			printf("%s",block[count_input_delete]);
 			Sleep(5);
 			}	
-	gotoxy(25,28);
+	gotoxy(24,28);
 }
 
 void count1(int count_input_delete,int x,int y)										   //카운트 1 
@@ -98,7 +99,7 @@ void count1(int count_input_delete,int x,int y)										   //카운트 1
 			printf("%s",block[count_input_delete]);
 			Sleep(5);
 			}
-	gotoxy(25,28);
+	gotoxy(24,28);
 }
 
 void countdown()															          //카운트 틀 
@@ -145,7 +146,7 @@ void player_down()																//플레이어 내려오는것 구현
 		printf("  ");
 		Sleep(500);
 	}
-	gotoxy(25,28);
+	gotoxy(24,28);
 }
 
 void score(int stage)															//점수판 구현 
@@ -154,7 +155,7 @@ void score(int stage)															//점수판 구현
 	Sleep(score_speed[stage-1]);
 	gotoxy(52,6);
 	printf("%d",point++/10);
-	gotoxy(25,28);
+	gotoxy(24,28);
 }
 	
 void block_create()
@@ -243,7 +244,7 @@ int player_moving_and_block()
 					return 1;
 					}
 				}
-	gotoxy(25,28);
+	gotoxy(24,28);
 }
 main()
 {
